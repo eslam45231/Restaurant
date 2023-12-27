@@ -1,0 +1,145 @@
+.Navbar{
+width: 100%;
+height: 15vh;
+}
+.firstNav{
+    height: 5vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.412);
+}
+.leftFirst,.rightFirst{
+    display: flex;
+}
+
+.leftFirst p,.rightFirst p{
+    display: flex;
+    margin: 0 7px;
+    align-items: center;
+
+}
+.leftFirst p span:first-child,.rightFirst p span:first-child{
+margin: 0 8px;
+}
+
+.leftFirst p,.rightFirst p span{
+    display: flex;
+    margin: 0 7px;
+    color: rgb(9, 253, 237);
+
+}
+.layouutPage{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.315);
+}
+.secNav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:  0 7px;
+}
+.secNav .logo{
+    display: flex;
+    align-items: center;
+}
+.logo .one{
+    margin: 0 7px;
+}
+.logo .one i{
+    width: 50px;
+    height: 50px;
+    color: white;
+    border-radius: 50%;
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo .two p{
+    text-transform: capitalize;
+    font-size: 25px;
+}
+.logo .two p:last-child{
+    font-size: 20px;
+    color: white;
+}
+
+.Links ul{
+display: flex;
+color: white;
+}
+.Links ul li{
+    padding: 0 7px;
+    list-style: none;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.Links ul li::after{
+    content: "";
+    position: absolute;
+    left:0 ;
+    background-color: red;
+    bottom: -20px;
+    margin: 0 7px;
+    width: 100%;
+    transition: .3s;
+    height: 3px;
+    transform-origin: center;
+    width: 0;
+}
+.Links ul li:hover:after{
+    width: 100%;
+}
+
+
+.Navbar button{
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 7px 15px;
+    border-radius: 15px;
+    border: white 1px solid;
+    width: fit-content;
+    position: relative;
+    transition: .4s;
+}
+.Navbar button:hover{
+    border: 1px solid rgba(102, 51, 153, 0.937);
+
+}
+.Navbar button::after{
+    content: "";
+    font-size: 15px;
+    border-radius: 15px;
+color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(102, 51, 153, 0.937);
+    transform-origin: right;
+    transition: .5s;
+   height: 100%;
+   transform: translateY(-100%);
+   opacity: 0;
+}
+button span{
+    z-index: 9999999;
+}
+.Navbar button:hover:after{
+    content: "find a book";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(102, 51, 153, 0.937);
+    transform: translateY(0%);
+opacity: 1;
+}

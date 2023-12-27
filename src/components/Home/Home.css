@@ -1,0 +1,105 @@
+.Home{
+    width: 100%;
+    margin: 30px 0;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+.slider{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px 0;
+    position: relative;
+    height: 100%;
+    justify-content: center;
+}
+.slider h1{
+    text-transform: capitalize;
+    font-size: 70px;
+}
+.slider p{
+    text-transform: capitalize;
+}
+.containerSlider{
+    width: 50%;
+}
+.ParaHome{
+    position: relative;
+}
+.ParaHome::after{
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 5px;
+    background-color: red;
+}
+.ParaHome::before{
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    z-index: 999999999;
+    left: 0%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid white;
+    animation: move infinite 3s alternate ease-in-out;
+}
+.containerSlider button{
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 7px 15px ;
+    border-radius: 15px;
+}
+
+@keyframes move {
+    0%{
+        transform: translateX(0);
+
+    }
+    100%{
+        transform: translateX(136px)
+    }
+}
+.layoutHome{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 7px;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.layoutHome p{
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+@media (max-width:767px) {
+    .containerSlider{
+        width: 100%;
+    }
+    .layoutHome{
+        display: flex;
+        align-items: flex-end;
+    }
+}
